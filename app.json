@@ -11,6 +11,10 @@
     "ios": {
       "supportsTablet": true
     },
+    "plugins": [
+      "react-native-polyfill-globals"
+    ],
+
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -23,6 +27,10 @@
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+    "extra": {
+      "supabaseUrl" : "https://zjzepiyjznaxeehswkzu.supabase.co",
+      "supabaseKey" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InpqemVwaXlqem5heGVlaHN3a3p1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDYwMDcyNDMsImV4cCI6MjA2MTU4MzI0M30.cKoO5_NsOYCA_NYzMibW9C9695HaLOIv_9d5T2Vo0Gk"
+    },
     "plugins": [
       "expo-router",
       [
@@ -33,7 +41,9 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      "expo-font",
+      "expo-asset"
     ],
     "experiments": {
       "typedRoutes": true

@@ -1,10 +1,18 @@
+import { EventEmitter } from 'events';
 import { Stack } from "expo-router";
+import 'react-native-polyfill-globals';
 import '../global.css';
-import 'react-native-url-polyfill'
 
-import { AuthProvider} from "@/providers/AuthProvider";
-import {StatusBar} from "expo-status-bar";
+import { AuthProvider } from "@/providers/AuthProvider";
+import { StatusBar } from "expo-status-bar";
 
+declare global {
+  interface GlobalThis {
+    EventEmitter: typeof EventEmitter;
+  }
+}
+
+(global as any).EventEmitter = EventEmitter;
 
 export default function RootLayout() {
   return (

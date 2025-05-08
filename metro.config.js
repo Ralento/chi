@@ -17,5 +17,6 @@ config.resolver.extraNodeModules = {
   zlib: require.resolve('browserify-zlib'),
 };
 
+
 // Apply NativeWind configuration
 module.exports = withNativeWind(config, { input: './global.css' });
